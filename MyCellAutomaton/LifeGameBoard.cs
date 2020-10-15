@@ -24,12 +24,12 @@ namespace MyCellAutomaton.ConwayLifeGame
         }
 
         /// <summary>
-        /// 指定した座標のセルの状態(生:true, 死:false)を取得します. 座標は左上基準です.
+        /// 指定した座標のセルの状態を取得します. 座標は左上基準です.
         /// </summary>
         /// <param name="h"></param>
         /// <param name="w"></param>
-        /// <returns></returns>
-        public bool this[int h, int w] => board[h][w].IsAlive;
+        /// <returns>生:true, 死:false</returns>
+        public bool IsAlive(int h, int w) => board[h][w].IsAlive;
 
         private LifeGameBoard(LifeGameCell[][] board)
         {
