@@ -31,7 +31,12 @@ namespace MyCellAutomaton.ConwayLifeGame
         /// <returns></returns>
         public bool this[int h, int w] => board[h][w].IsAlive;
 
-        private LifeGameBoard(LifeGameCell[][] board) => this.board = board;
+        private LifeGameBoard(LifeGameCell[][] board)
+        {
+            this.board = board;
+            this.Height = board.Length;
+            this.Width = board[0].Length;
+        }
 
         /// <summary>
         /// 長方形の盤面を作成します. 
