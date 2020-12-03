@@ -82,8 +82,6 @@ namespace MyCellAutomaton.ConwayLifeGame
         }
         public static LifeGameCell EmptyCell => EmptyLifeGameCell.Instance;
 
-
-
         private class EmptyLifeGameCell : LifeGameCell
         {
             public override bool IsAlive => false;
